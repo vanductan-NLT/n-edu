@@ -18,6 +18,7 @@ import {
   HelpCircle,
   Sparkles,
   Gift,
+  Lock,
 } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 import { courses } from "@/data/courses";
@@ -609,14 +610,21 @@ const ThirtyDayPage = () => {
                 </ul>
                 <div className="flex-grow" />
                 <div className="relative w-full mt-6">
-                  <Button
-                    onClick={() => handleDirectCheckout("monthly")}
-                    className="relative h-11 w-full rounded-[0.95rem] border border-black/[0.04] bg-[#F6B917] px-5 text-sm font-black uppercase tracking-[0.15em] text-slate-900 shadow-[0_2px_6px_rgba(15,23,42,0.06)] transition-all duration-300 hover:scale-100 hover:bg-slate-900 hover:text-[#F6B917] hover:shadow-[0_3px_8px_rgba(15,23,42,0.08)] active:scale-[0.99]"
-                  >
-                    <span className="flex items-center justify-center gap-2 text-sm font-[950] uppercase tracking-[0.15em]">
-                      {t("thirty_day_challenge.pricing.monthly.button")}
-                    </span>
-                  </Button>
+                  {thirtyDayCourse?.registrationOpen === false ? (
+                    <div className="flex items-center justify-center gap-2 h-11 w-full rounded-[0.95rem] border border-slate-200 bg-slate-100 text-slate-400 text-sm font-bold uppercase tracking-[0.15em]">
+                      <Lock className="h-4 w-4 flex-shrink-0" />
+                      Đã đóng đăng ký
+                    </div>
+                  ) : (
+                    <Button
+                      onClick={() => handleDirectCheckout("monthly")}
+                      className="relative h-11 w-full rounded-[0.95rem] border border-black/[0.04] bg-[#F6B917] px-5 text-sm font-black uppercase tracking-[0.15em] text-slate-900 shadow-[0_2px_6px_rgba(15,23,42,0.06)] transition-all duration-300 hover:scale-100 hover:bg-slate-900 hover:text-[#F6B917] hover:shadow-[0_3px_8px_rgba(15,23,42,0.08)] active:scale-[0.99]"
+                    >
+                      <span className="flex items-center justify-center gap-2 text-sm font-[950] uppercase tracking-[0.15em]">
+                        {t("thirty_day_challenge.pricing.monthly.button")}
+                      </span>
+                    </Button>
+                  )}
                 </div>
                 <div className="mt-3 min-h-[1.75rem]" aria-hidden="true" />
               </div>
@@ -698,12 +706,19 @@ const ThirtyDayPage = () => {
                   <div className="flex-grow" />
                   {/* CTA button */}
                   <div className="relative w-full mt-6">
-                    <Button
-                      onClick={() => handleDirectCheckout("membership")}
-                      className="relative h-11 w-full rounded-[0.95rem] border border-black/[0.04] bg-[#F6B917] px-5 text-sm font-black uppercase tracking-[0.15em] text-slate-900 shadow-[0_2px_6px_rgba(15,23,42,0.06)] transition-all duration-300 hover:scale-100 hover:bg-slate-900 hover:text-[#F6B917] hover:shadow-[0_3px_8px_rgba(15,23,42,0.08)] active:scale-[0.99]"
-                    >
-                      <span className="font-[950]">{t("thirty_day_challenge.pricing.membership.button")}</span>
-                    </Button>
+                    {thirtyDayCourse?.registrationOpen === false ? (
+                      <div className="flex items-center justify-center gap-2 h-11 w-full rounded-[0.95rem] border border-slate-200 bg-slate-100 text-slate-400 text-sm font-bold uppercase tracking-[0.15em]">
+                        <Lock className="h-4 w-4 flex-shrink-0" />
+                        Đã đóng đăng ký
+                      </div>
+                    ) : (
+                      <Button
+                        onClick={() => handleDirectCheckout("membership")}
+                        className="relative h-11 w-full rounded-[0.95rem] border border-black/[0.04] bg-[#F6B917] px-5 text-sm font-black uppercase tracking-[0.15em] text-slate-900 shadow-[0_2px_6px_rgba(15,23,42,0.06)] transition-all duration-300 hover:scale-100 hover:bg-slate-900 hover:text-[#F6B917] hover:shadow-[0_3px_8px_rgba(15,23,42,0.08)] active:scale-[0.99]"
+                      >
+                        <span className="font-[950]">{t("thirty_day_challenge.pricing.membership.button")}</span>
+                      </Button>
+                    )}
                   </div>
                   <div className="mt-3 min-h-[1.75rem]" aria-hidden="true" />
                 </div>

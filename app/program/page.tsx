@@ -178,7 +178,8 @@ export default function ProgramPage() {
   };
 
   const getCourseActionState = (slug: string) => {
-    const isDisabled = false;
+    const courseData = courses.find((c) => c.slug === slug);
+    const isDisabled = courseData?.registrationOpen === false;
 
     return {
       isDisabled,
@@ -186,7 +187,7 @@ export default function ProgramPage() {
         ? "Đã đóng đăng ký"
         : t("program_page.card.register"),
       secondaryLabel: isDisabled
-        ? " Ngừng thanh toán"
+        ? "Ngừng thanh toán"
         : t("program_page.card.learn_more"),
     };
   };

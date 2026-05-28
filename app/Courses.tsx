@@ -3,7 +3,7 @@
 import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronRight, ChevronLeft, Calendar, ArrowRight } from "lucide-react";
+import { ChevronRight, ChevronLeft, Calendar, ArrowRight, Lock } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
@@ -37,6 +37,8 @@ const SlideContent = ({ slide }: { slide: CourseSlide }) => {
   const { buyNow } = useCart();
   const router = useRouter();
   const isThirtyDayChallenge = slide.slug === "thu-thach-30-ngay";
+  const thirtyDayCourseData = courses.find((c) => c.slug === "thu-thach-30-ngay");
+  const isRegistrationClosed = isThirtyDayChallenge && thirtyDayCourseData?.registrationOpen === false;
 
   const handleRegister = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -97,23 +99,37 @@ const SlideContent = ({ slide }: { slide: CourseSlide }) => {
           <p className="line-clamp-2 px-4 text-sm font-medium text-white/90 drop-shadow-md">
             {slide.content}
           </p>
-          <Button
-            className="rounded-full !bg-[#d0011b] px-10 py-6 text-base font-black leading-[1.35] !text-white shadow-2xl transition-all duration-300 hover:!bg-[#d0011b]/90 active:scale-95"
-            onClick={handleRegister}
-          >
-            {mobileButtonLabel}
-          </Button>
+          {isRegistrationClosed ? (
+            <div className="flex items-center justify-center gap-2 rounded-full bg-white/20 px-10 py-3 text-sm font-bold text-white/70 backdrop-blur-sm">
+              <Lock className="h-4 w-4 flex-shrink-0" />
+              Đã đóng đăng ký
+            </div>
+          ) : (
+            <Button
+              className="rounded-full !bg-[#d0011b] px-10 py-6 text-base font-black leading-[1.35] !text-white shadow-2xl transition-all duration-300 hover:!bg-[#d0011b]/90 active:scale-95"
+              onClick={handleRegister}
+            >
+              {mobileButtonLabel}
+            </Button>
+          )}
         </div>
       </div>
 
       <div className="absolute inset-x-0 bottom-0 hidden flex-col justify-end px-8 py-6 text-white md:flex">
         <div className="info-bottom slide-bottom flex items-center gap-4">
-          <Button
-            className="h-auto shrink-0 rounded-full !bg-[#d0011b] px-6 py-2.5 text-sm font-bold leading-[1.35] !text-white shadow-lg hover:!bg-[#d0011b]/90"
-            onClick={(e) => handleDesktopRegister(e, slide)}
-          >
-            {desktopButtonLabel}
-          </Button>
+          {isRegistrationClosed ? (
+            <div className="flex h-auto shrink-0 items-center justify-center gap-1.5 rounded-full bg-white/20 px-6 py-2.5 text-sm font-bold text-white/70 backdrop-blur-sm">
+              <Lock className="h-3.5 w-3.5 flex-shrink-0" />
+              Đã đóng đăng ký
+            </div>
+          ) : (
+            <Button
+              className="h-auto shrink-0 rounded-full !bg-[#d0011b] px-6 py-2.5 text-sm font-bold leading-[1.35] !text-white shadow-lg hover:!bg-[#d0011b]/90"
+              onClick={(e) => handleDesktopRegister(e, slide)}
+            >
+              {desktopButtonLabel}
+            </Button>
+          )}
           <p className="mb-0 flex h-full translate-y-[2px] items-center truncate text-lg font-medium drop-shadow-md">
             <span className="font-bold text-white">{slide.type}</span>
             <span className="mx-2 text-white/50">•</span>

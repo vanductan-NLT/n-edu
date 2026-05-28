@@ -51,6 +51,7 @@ export interface Course {
   instructors: Instructor[]
   audience: Audience[]
   privileges: Privilege[]
+  registrationOpen?: boolean
 }
 
 export const courses: Course[] = [
@@ -456,6 +457,7 @@ export const courses: Course[] = [
     ],
     audience: [],
     privileges: [],
+    registrationOpen: false,
     // Add mobileImage property to explicitly handle responsive images
     mobileImage: '/course/30days_mobile.svg'  // Mobile optimized image for the course page
   }
