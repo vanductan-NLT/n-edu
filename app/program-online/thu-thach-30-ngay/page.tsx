@@ -68,8 +68,8 @@ const ThirtyDayPage = () => {
 
   // Determine which images to use (prioritize dynamic DB data over static data)
   // These values will be calculated using the current state of courseData
-  const challengePosterDesktop = courseData?.program?.image || thirtyDayCourse?.heroImage || "/course/30days_desktop.svg";
-  const challengePosterMobile = courseData?.program?.image || thirtyDayCourse?.mobileImage || "/course/30days_mobile.svg";
+  const challengePosterDesktop = courseData?.program?.image || thirtyDayCourse?.heroImage || "/course/30days_desktop.png";
+  const challengePosterMobile = courseData?.program?.image || thirtyDayCourse?.mobileImage || "/course/30days_mobile.png";
 
   // Sync some data from DB to local variables if available
   const dbInfo = courseData?.description?.information || {};
@@ -77,7 +77,7 @@ const ThirtyDayPage = () => {
   const dbMentor = courseData?.mentors?.[0];
 
   // Logic mapping fields FROM YOUR DATABASE LOG
-  const displaySchedule = courseData?.program?.total_sessions || t("28/05/2026 - 28/06/2026");
+  const displaySchedule = courseData?.program?.total_sessions || t("28.06.2026 - 28.07.2026");
 
   const displayStudentCount = t("thirty_day_challenge.timeline.students_count");
 

@@ -717,22 +717,22 @@ export const vi = {
         timeline: {
             heading: "SAU 30 NGÀY BẠN ĐƯỢC...?",
             block_1: {
-                title: "Làm chủ công nghệ dễ dàng",
-                quote: "“AI không thay thế con người, nhưng người biết dùng AI sẽ thay thế những người còn lại.”",
-                collapsed: "LÀM CHỦ CÔNG NGHỆ\\nDỄ DÀNG",
-                content: "Thay vì sợ hãi những thuật toán phức tạp, bạn học cách điều khiển AI như một trợ lý đắc lực. Khi bạn biết cách 'giao việc' đúng, những tác vụ tốn hàng giờ đồng hồ sẽ được xử lý xong chỉ trong vài phút."
+                title: "Để năng lực của bạn lên tiếng",
+                quote: "Năng lực không tự biết nói, nếu bạn chọn im lặng, thế giới sẽ bỏ lỡ một người làm nghề có tâm.",
+                collapsed: "ĐỂ NĂNG LỰC\\nCỦA BẠN LÊN TIẾNG",
+                content: "Thử thách này giúp bạn tìm ra điểm khác biệt độc nhất, tự tin bước ra thị trường bằng chính giá trị thật mà không cần gồng mình."
             },
             block_2: {
-                title: "Tối ưu hóa hiệu suất làm việc",
-                quote: "“Làm việc thông minh hơn thay vì chỉ chăm chỉ đơn thuần.”",
-                collapsed: "TỐI ƯU HIỆU SUẤT\\nLÀM VIỆC",
-                content: "Bạn không còn loay hoay với những đầu việc thủ công lặp đi lặp lại. AI giúp bạn tự động hóa quy trình, sáng tạo nội dung,... giúp bạn rảnh tay để tập trung vào những chiến lược quan trọng hơn"
+                title: "Đón khách bằng trang cá nhân gọn gàng",
+                quote: "Trang cá nhân là ngôi nhà online. Ngăn nắp thì khách mới muốn ở lại.",
+                collapsed: "ĐÓN KHÁCH BẰNG\\nTRANG CÁ NHÂN GỌN GÀNG",
+                content: "👉 Làm thương hiệu không phải là khoe mẽ. Chỉ là bạn được hướng dẫn cách sắp xếp lại Facebook, TikTok hay LinkedIn thật uy tín, rõ ràng, giúp khách hàng nhìn vào là tin tưởng và chủ động tìm đến."
             },
             block_3: {
-                title: "Sáng tạo không giới hạn",
-                quote: "“Công nghệ là đòn bẩy để những ý tưởng điên rồ nhất trở thành hiện thực.”",
-                collapsed: "SÁNG TẠO KHÔNG\\nGIỚI HẠN",
-                content: "AI không giới hạn khả năng của bạn, nó mở rộng nó ra. Bạn sẽ học cách 'hỏi đúng', điều khiển công cụ, biến ý tưởng mơ hồ thành kết quả cụ thể một cách nhanh chóng."
+                title: "Nuôi dưỡng kênh bằng giá trị thật",
+                quote: "Đừng biến content thành áp lực, hãy biến nó thành nơi chia sẻ trải nghiệm.",
+                collapsed: "NUÔI DƯỠNG KÊNH\\nBẰNG GIÁ TRỊ THẬT",
+                content: "👉 Xóa bỏ áp lực \"hôm nay đăng gì\" rồi lại bỏ bê kênh. Bạn sẽ biết cách sản xuất nội dung nhẹ nhàng, đều đặn và đúng với con người thật của mình để tự nhiên thu hút người nghe."
             },
             time_label: "THỜI GIAN DIỄN RA",
             students_label: "30 VIDEO BÀI TẬP",

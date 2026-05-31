@@ -430,7 +430,7 @@ export const courses: Course[] = [
     mode: 'online',
     title: 'thirty_day_challenge.title',
     category: ['categories.personal_development'],
-    heroImage: '/course/30days_desktop.svg', // Primary image used in listings
+    heroImage: '/course/30days_desktop.png', // Primary image used in listings
     price: {
       amount: '396.000',
       currency: 'VNĐ'
@@ -459,7 +459,7 @@ export const courses: Course[] = [
     privileges: [],
     registrationOpen: false,
     // Add mobileImage property to explicitly handle responsive images
-    mobileImage: '/course/30days_mobile.svg'  // Mobile optimized image for the course page
+    mobileImage: '/course/30days_mobile.png'  // Mobile optimized image for the course page
   }
 ]
 

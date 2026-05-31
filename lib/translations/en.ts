@@ -717,22 +717,22 @@ export const en = {
         timeline: {
             heading: "AFTER 30 DAYS, WHAT DO YOU GET...?",
             block_1: {
-                title: "Master technology easily",
-                quote: "“AI will not replace humans, but humans who use AI will replace those who don't.”",
-                collapsed: "MASTER TECHNOLOGY\\nEASILY",
-                content: "Instead of fearing complex algorithms, you learn to control AI as a powerful assistant. When you know how to properly 'delegate', tasks that took hours will be completed in just a few minutes."
+                title: 'Let your competence speak',
+                quote: 'Competence cannot speak for itself. If you choose silence, the world will miss someone who truly cares about their craft.',
+                collapsed: 'LET YOUR\\nCOMPETENCE SPEAK',
+                content: 'This challenge helps you discover your unique differentiator and step into the market with confidence, using your real value — without forcing yourself.'
             },
             block_2: {
-                title: "Optimize work performance",
-                quote: "“Work smarter, not just harder.”",
-                collapsed: "OPTIMIZE WORK\\nPERFORMANCE",
-                content: "You no longer struggle with repetitive manual tasks. AI helps you automate processes, create content,... freeing you to focus on more important strategies."
+                title: 'Welcome clients with a polished personal page',
+                quote: 'Your personal page is your online home. Keep it tidy and clients will want to stay.',
+                collapsed: 'WELCOME CLIENTS WITH\\nA POLISHED PERSONAL PAGE',
+                content: "Building a personal brand isn't about showing off. You'll be guided to organize your Facebook, TikTok, or LinkedIn professionally and clearly, so clients trust you at first glance and reach out on their own."
             },
             block_3: {
-                title: "Limitless creativity",
-                quote: "“Technology is the lever to turn the craziest ideas into reality.”",
-                collapsed: "LIMITLESS\\nCREATIVITY",
-                content: "AI does not limit your capabilities, it expands them. You will learn how to 'ask right', control tools, and turn vague ideas into concrete results quickly."
+                title: 'Nurture your channel with real value',
+                quote: "Don't turn content into pressure — make it a place to share experiences.",
+                collapsed: 'NURTURE YOUR CHANNEL\\nWITH REAL VALUE',
+                content: "Eliminate the daily pressure of 'what should I post today' followed by neglecting your channel. You'll learn to produce content effortlessly, consistently, and authentically — naturally attracting the right audience."
             },
             time_label: "DURATION",
             students_label: "30 EXERCISE VIDEOS",

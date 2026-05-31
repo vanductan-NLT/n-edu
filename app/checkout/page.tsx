@@ -674,8 +674,8 @@ export default function CheckoutPage() {
                     <div className="space-y-6">
                       {items.map((item) => {
                         const itemImage = item.slug === 'thu-thach-30-ngay'
-                          ? (thirtyDayCheckoutImage && thirtyDayCheckoutImage !== '' ? thirtyDayCheckoutImage : '/course/30days_desktop.svg')
-                          : (item.heroImage || '/course/30days_desktop.svg');
+                          ? (thirtyDayCheckoutImage && thirtyDayCheckoutImage !== '' ? thirtyDayCheckoutImage : '/course/30days_desktop.png')
+                          : (item.heroImage || '/course/30days_desktop.png');
 
                         return (
                           <div key={item.id} className="pb-6 border-b last:border-b-0 border-gray-100">
@@ -684,7 +684,7 @@ export default function CheckoutPage() {
                                 src={itemImage}
                                 alt={t(item.title)}
                                 className="w-full md:w-[160px] aspect-video object-cover rounded-ios-lg shadow-sm shrink-0 relative z-10 bg-white"
-                                onError={e => { e.currentTarget.src = '/course/30days_desktop.svg'; }}
+                                onError={e => { e.currentTarget.src = '/course/30days_desktop.png'; }}
                               />
 
                               <div className="flex-1 flex flex-col justify-center">
